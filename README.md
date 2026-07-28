@@ -153,6 +153,12 @@ Credit Card Fraud Detection.ipynb
 
 ---
 
+## 📌 Conclusion
+
+This project demonstrates the complete machine learning workflow for detecting fraudulent credit card transactions using an imbalanced dataset. Through exploratory data analysis, preprocessing, model training, hyperparameter tuning, and evaluation with appropriate classification metrics, the project highlights the importance of handling class imbalance in real-world fraud detection problems. It also reinforces that metrics such as Precision, Recall, F1-Score, and ROC-AUC provide more meaningful insights than accuracy alone for imbalanced datasets.
+
+---
+
 ## 📬 Contact
 
 **Nivetha**
