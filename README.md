@@ -1,97 +1,163 @@
 # credit-card-fraud-detection
-Machine Learning project to detect fraudulent credit card transactions using classification models, SMOTE for class imbalance, and hyperparameter tuning.
+A Machine Learning project that detects fraudulent credit card transactions using an imbalanced dataset. The project focuses on data preprocessing, exploratory data analysis (EDA), handling class imbalance, model training, hyperparameter tuning, and performance evaluation.
 
-Project Overview
+---
 
-This project builds a machine learning model to identify fraudulent credit card transactions. Since fraud detection datasets are highly imbalanced, SMOTE (Synthetic Minority Over-sampling Technique) was applied to balance the training data before model training.
+## 📌 Project Overview
 
-Multiple classification algorithms were evaluated and compared using Precision, Recall, F1-Score, and ROC-AUC to identify the best-performing model.
+Credit card fraud detection is a highly imbalanced binary classification problem where fraudulent transactions represent only a small fraction of all transactions. The goal of this project is to build a robust machine learning model capable of accurately identifying fraudulent transactions while minimizing false positives.
 
-Dataset
-Source: Kaggle
-Transactions: 284,807
-Fraudulent Transactions: 492
-Legitimate Transactions: 284,315
+---
 
-The dataset is extremely imbalanced, making fraud detection a challenging classification problem.
+## 🎯 Objectives
 
-Project Workflow
-Data Collection
-      ↓
-Data Cleaning
-      ↓
-Exploratory Data Analysis
-      ↓
-Feature Scaling
-      ↓
-Train-Test Split
-      ↓
-SMOTE
-      ↓
-Model Training
-      ↓
-Model Comparison
-      ↓
-Hyperparameter Tuning
-      ↓
-Final Evaluation
-Exploratory Data Analysis
+- Understand the characteristics of fraudulent transactions.
+- Perform comprehensive Exploratory Data Analysis (EDA).
+- Handle the highly imbalanced dataset.
+- Train multiple machine learning models.
+- Tune model hyperparameters.
+- Evaluate models using appropriate metrics for imbalanced classification.
 
-Performed:
+---
 
-Dataset summary
-Missing value analysis
-Class imbalance analysis
-Amount distribution
-Time distribution
-Correlation heatmap
-Outlier detection
-Models Used
-Logistic Regression
-Decision Tree
-Random Forest
-XGBoost
-Evaluation Metrics
-Accuracy
-Precision
-Recall
-F1-Score
-ROC-AUC
-Best Model
+## 📂 Dataset
 
-Random Forest achieved the best overall balance between Precision and Recall.
+- **Dataset:** Credit Card Fraud Detection Dataset
+- **Source:** Kaggle
+- **Features:** 31
+  - **Time**
+  - **Amount**
+  - **V1 – V28** (PCA transformed features)
+  - **Class** (Target)
+    - 0 → Legitimate Transaction
+    - 1 → Fraudulent Transaction
 
-Example:
+> **Note:** The features V1–V28 are principal components obtained using PCA to protect customer privacy.
 
-Model	Accuracy	Precision	Recall	F1-Score	ROC-AUC
-Random Forest	0.9977	0.422	0.857	0.566	0.981
+---
 
+## 🛠 Technologies Used
 
-Technologies Used
-Python
-Pandas
-NumPy
-Matplotlib
-Seaborn
-Scikit-learn
-XGBoost
-Imbalanced-learn
-Folder Structure
+- Python
+- Pandas
+- NumPy
+- Matplotlib
+- Seaborn
+- Scikit-learn
+- XGBoost
+
+---
+
+## 📊 Exploratory Data Analysis
+
+The project includes:
+
+- Dataset overview
+- Missing value analysis
+- Duplicate value checking
+- Class distribution visualization
+- Correlation heatmap
+- Distribution plots
+- Boxplots for outlier analysis
+- Transaction Amount analysis
+- Time feature analysis
+
+---
+
+## 🤖 Machine Learning Models
+
+The following models were trained and compared:
+
+- Logistic Regression
+- Decision Tree Classifier
+- Random Forest Classifier
+- XGBoost Classifier
+
+---
+
+## ⚙ Hyperparameter Tuning
+
+RandomizedSearchCV was used to optimize the Random Forest model for improved performance.
+
+---
+
+## 📈 Evaluation Metrics
+
+Since the dataset is highly imbalanced, multiple evaluation metrics were used instead of relying only on accuracy.
+
+- Accuracy
+- Precision
+- Recall
+- F1 Score
+- ROC-AUC Score
+- Confusion Matrix
+- Classification Report
+
+---
+
+## 📁 Project Structure
+
+```
 Credit-Card-Fraud-Detection/
 │
 ├── Credit Card Fraud Detection.ipynb
+├── creditcard.csv
 ├── README.md
-├── requirements.txt
-├── images/
-│   ├── class_distribution.png
-│   ├── correlation_heatmap.png
-│   ├── roc_curve.png
-│   └── confusion_matrix.png
-└── dataset_link.txt
-Future Improvements
-Deep Learning models
-AutoML
-Explainability using SHAP
-Real-time fraud detection
-conculsion:
-Random Forest was selected as the final model because it achieved the highest F1-score and ROC-AUC among all evaluated models. Applying SMOTE significantly improved the model's ability to detect fraudulent transactions in this highly imbalanced dataset.
+└── requirements.txt
+```
+
+---
+
+## 🚀 How to Run
+
+1. Clone the repository
+
+```bash
+git clone https://github.com/yourusername/Credit-Card-Fraud-Detection.git
+```
+
+2. Navigate to the project directory
+
+```bash
+cd Credit-Card-Fraud-Detection
+```
+
+3. Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+4. Launch Jupyter Notebook
+
+```bash
+jupyter notebook
+```
+
+5. Open:
+
+```
+Credit Card Fraud Detection.ipynb
+```
+
+---
+
+## 📌 Key Learnings
+
+- Working with highly imbalanced datasets
+- Exploratory Data Analysis (EDA)
+- Feature analysis
+- Machine Learning model comparison
+- Hyperparameter tuning
+- Model evaluation using appropriate classification metrics
+
+---
+
+## 📬 Contact
+
+**Nivetha**
+
+- GitHub: https://github.com/nivetha-engineer
+
+If you found this project helpful, consider giving it a ⭐ on GitHub!
+
